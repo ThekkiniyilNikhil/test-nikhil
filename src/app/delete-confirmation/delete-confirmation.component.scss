@@ -1,0 +1,13 @@
+.delete-confirmation-container {
+  text-align: center;
+}
+.btns-container {
+  margin-top: 24px;
+  button {
+    min-width: 100px;
+    margin-right: 15px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

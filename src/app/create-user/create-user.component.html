@@ -1,0 +1,38 @@
+<div class="create-user-container">
+  <h1 class="title">Create User</h1>
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <div class="form-field">
+      <label for="">User</label>
+      <input type="text" formControlName="user">
+      <p class="error-msg" *ngIf="submitted && userForm.get('user')?.errors">Username required
+      <p class="error-msg" *ngIf="userForm.controls['user'].invalid && (userForm.controls['user'].dirty || userForm.controls['user'].touched)">Username required
+      </p>
+    </div>
+    <div class="form-field">
+      <label for="">Email</label>
+      <input type="text" formControlName="email">
+      <p class="error-msg" *ngIf="submitted && userForm.get('email')?.errors">Email required
+      <p class="error-msg" *ngIf="userForm.controls['email'].invalid && (userForm.controls['email'].dirty || userForm.controls['email'].touched)">Email not valid
+    </div>
+    <div class="form-field">
+      <label for="">Phone</label>
+      <input type="text" formControlName="phone" maxlength="18">
+      <p class="error-msg" *ngIf="submitted && userForm.get('phone')?.errors">Pnone number required
+      <p class="error-msg" *ngIf="userForm.get('phone')?.hasError('pattern')">Phone number not valid
+    </div>
+    <div class="form-field">
+      <label>Select Status</label>
+      <select formControlName="status">
+          <option value="">Select</option>
+          <option value="active">Active</option>
+          <option value="inactive">Inactive</option>
+          <option value="blocked">Blocked</option>
+      </select>
+      <p class="error-msg" *ngIf="submitted && userForm.get('status')?.errors">Status required
+    </div>
+    <div class="form-field form-field-btns">
+      <button class="secondary-btn" (click)="cancelUserCreateFn()">Cancel</button>
+      <button class="primary-btn" type="submit" [class.disabled]="userForm.invalid">Save</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,25 @@
+.view-user-details-container {
+  padding-top: 42px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: auto;
+  row-gap: 28px;
+  .title {
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0;
+    grid-column: 1/13;
+    grid-row: 1;
+    justify-self: center;
+  }
+  .details{
+    grid-row: 2;
+    color: #a1a1a1;
+    text-align: center;
+    span {
+      font-size: 16px;
+      font-weight: 500;
+      color: #404041;
+    }
+  }
+}

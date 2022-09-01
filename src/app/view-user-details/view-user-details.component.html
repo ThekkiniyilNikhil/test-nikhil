@@ -1,0 +1,24 @@
+<div class="view-user-details-container">
+  <h1 class="title">User Details</h1>
+  <p class="details">
+    Name:<br>
+    <span>{{userDetails.user}}</span>
+  </p>
+  <p class="details">
+    Email:<br>
+    <span>{{userDetails.email}}</span>
+  </p>
+  <p class="details">
+    Phone:<br>
+    <span>{{userDetails.phone}}</span>
+  </p>
+  <p class="details">
+    Status:<br>
+    <span
+      [ngClass]="{
+        'green': userDetails.status === 'active',
+        'red': userDetails.status === 'inactive',
+        'grey': userDetails.status === 'blocked'
+      }">{{userDetails.status | uppercase}}</span>
+  </p>
+</div>

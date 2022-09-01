@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.secondary-btn {
+  min-height: 34px;
+  font-size: 12px;
+  color: #43a0b2;
+  text-transform: capitalize;
+  background-color: transparent;
+  border: 1px solid #43a0b2;
+  border-radius: 4px;
+  cursor: pointer;
+  &.disabled {
+    pointer-events: none;
+    background-color: #ddd;
+    opacity: 0.8;
+  }
+}
+.primary-btn {
+  min-height: 34px;
+  font-size: 12px;
+  color: #fff;
+  text-transform: capitalize;
+  background-color: #43a0b2;
+  border: 1px solid #43a0b2;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.green {
+  color: green !important;
+}
+.red {
+  color: red !important;
+}
+.grey {
+  color: grey !important;
+}

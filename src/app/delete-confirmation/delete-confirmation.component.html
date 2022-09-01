@@ -1,0 +1,10 @@
+<div class="delete-confirmation-container">
+  <h2>Confirmation</h2>
+  <h3>
+    Are you sure you want to delete the details of {{data.user}} from the list?
+  </h3>
+  <div class="btns-container">
+    <button class="secondary-btn" (click)="closeModalFn()">Cancel</button>
+    <button class="primary-btn" (click)="confirmDeleteFn(data)">Confirm</button>
+  </div>
+</div>

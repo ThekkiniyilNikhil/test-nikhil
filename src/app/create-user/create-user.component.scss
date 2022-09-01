@@ -1,0 +1,61 @@
+.create-user-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: auto;
+  row-gap: 28px;
+  padding-top: 42px;
+  .title {
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0;
+    grid-column: 1/13;
+    grid-row: 1;
+    justify-self: center;
+  }
+  form {
+    min-width: 480px;
+    grid-column: 1/13;
+    grid-row: 2;
+    justify-self: center;
+  }
+}
+.form-field {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 20px;
+  label {
+    font-size: 12px;
+  }
+  input {
+    height: 36px;
+    border-radius: 4px;
+    border: 1px solid #999999;
+    padding: 0 5px 0;
+  }
+  select {
+    height: 38px;
+    border-radius: 4px;
+    border: 1px solid #999999;
+    cursor: pointer;
+  }
+}
+.form-field-btns {
+  flex-direction: row;
+  justify-content: center;
+  button {
+    min-width: 100px;
+    margin-right: 10px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+.error-msg {
+  margin: 0;
+  font-size: 12px;
+  color: red;
+  position: absolute;
+  right: 0;
+  bottom: -20px;
+}
